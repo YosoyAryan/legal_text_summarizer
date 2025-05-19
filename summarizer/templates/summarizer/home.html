@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Legal Document Summarizer</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Merriweather&family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+    <style>
+        body {
+            background: #fffdf5;
+            font-family: 'Poppins', sans-serif;
+        }
+
+        h1, h2, .navbar-brand {
+            font-family: 'Merriweather', serif;
+        }
+
+        .navbar {
+            background-color: #ff9933;
+        }
+
+        .navbar-brand {
+            color: white;
+            font-size: 1.8rem;
+        }
+
+        .navbar-brand:hover {
+            color: white;
+        }
+
+        .container {
+            margin-top: 3rem;
+        }
+
+        textarea {
+            font-family: 'Merriweather', serif;
+            font-size: 1rem;
+            line-height: 1.6;
+            background: #fffef8;
+            border-radius: 8px;
+            padding: 1rem;
+            border: 1px solid #ccc;
+            box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
+        }
+
+        .btn-custom {
+            background-color: #138808;
+            color: white;
+            font-weight: bold;
+            border-radius: 50px;
+            padding: 0.6rem 2rem;
+        }
+
+        .btn-custom:hover {
+            background-color: #0f6605;
+        }
+
+        .footer {
+            background-color: #138808;
+            color: white;
+            padding: 12px 0;
+            text-align: center;
+            margin-top: 5rem;
+        }
+
+    </style>
+</head>
+<body>
+
+<nav class="navbar shadow-sm">
+    <div class="container-fluid">
+        <a class="navbar-brand" href="#">🧾 Legal Text Summarizer</a>
+    </div>
+</nav>
+
+<div class="container">
+    <h2 class="text-center mb-4">Summarize Indian Legal Documents with Ease</h2>
+    <form method="POST" action="{% url 'summarize' %}">
+        {% csrf_token %}
+        <div class="mb-4">
+            <label for="legalText" class="form-label fw-semibold">Enter Legal Text</label>
+            <textarea class="form-control" id="legalText" name="legal_text" rows="12" placeholder="Paste your legal document here..."></textarea>
+        </div>
+        <div class="text-center">
+            <button type="submit" class="btn btn-custom btn-lg shadow-sm">✨ Summarize Now</button>
+        </div>
+    </form>
+</div>
+
+<div class="footer">
+    🇮🇳 Empowering Legal Literacy with AI | Built in Bharat 🇮🇳
+</div>
+
+</body>
+</html>
