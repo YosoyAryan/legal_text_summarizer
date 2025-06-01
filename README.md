@@ -1,6 +1,6 @@
 # Legal Document Text Summarizer
 
-A modern Django web application to summarize lengthy legal documents quickly and effectively using AI-powered natural language processing. Designed with a clean, Indian-themed UI for ease of use by legal professionals, students, and researchers.
+A modern Django web application to summarize lengthy legal documents quickly and effectively using AI -powered natural language processing. Designed with a clean, Indian-themed UI for ease of use by legal professionals, students, and researchers.
 
 ---
 
